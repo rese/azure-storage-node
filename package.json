@@ -66,6 +66,7 @@
     "test": "jshint lib && nsp check && mocha --no-timeouts --recursive test",
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec -u bdd --no-timeouts --recursive test",
     "coveralls": "npm run cover && cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js",
-    "genjs": "node ./browser/bundle.js"
+    "genjs": "node ./browser/bundle.js",
+    "prepare": "npm run genjs"
   }
 }
